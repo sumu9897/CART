@@ -1,5 +1,6 @@
 import React from 'react';
 import AppNavBar from "./AppNavBar.jsx";
+import Footer from "./Footer.jsx";
 
 const MasterLayout = (props) => {
     return (
@@ -7,6 +8,7 @@ const MasterLayout = (props) => {
             <AppNavBar/>
 
             {props.children}
+            <Footer/>
             
         </div>
     );

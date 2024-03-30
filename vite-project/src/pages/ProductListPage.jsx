@@ -1,10 +1,11 @@
 import React from 'react';
+import MasterLayout from "../components/MasterLayout.jsx";
 
 const ProductListPage = () => {
     return (
-        <div>
+        <MasterLayout>
             <h1>ProductListPage</h1>
-        </div>
+        </MasterLayout>
     );
 };
 
