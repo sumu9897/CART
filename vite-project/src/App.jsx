@@ -5,6 +5,7 @@ import LoginPage from "./pages/LoginPage.jsx";
 import VerifyPage from "./pages/VerifyPage.jsx";
 import CartListPage from "./pages/CartListPage.jsx";
 import ValidationHelper from "./utility/ValidationHelper.js";
+import PsgeNotFound from "./pages/PsgeNotFound.jsx";
 
 const App = () => {
 
@@ -13,8 +14,9 @@ const App = () => {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<ProductListPage/>} />
-
                     <Route path="/cart-list" element={<CartListPage/>}/>
+                    <Route path="/*" element={<PsgeNotFound/>}/>
+
 
 
                 </Routes>
