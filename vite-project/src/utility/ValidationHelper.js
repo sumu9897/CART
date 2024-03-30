@@ -1,7 +1,7 @@
 class ValidationHelper{
 
     static isLogin(){
-        return false
+        return true
     }
 }
 
