@@ -1,5 +1,8 @@
 import React from 'react';
-import {Button, Container, Form, Nav, Navbar, NavDropdown} from "react-bootstrap";
+import {Button, Container, Form, Nav, Navbar} from "react-bootstrap";
+import ValidationHelper from "../utility/ValidationHelper.js";
+import {NavLink} from "react-router-dom";
+
 
 const AppNavBar = () => {
     return (
@@ -11,14 +14,24 @@ const AppNavBar = () => {
                     <Nav
                         className="me-auto my-2 my-lg-0"
                         style={{ maxHeight: '100px' }}
-                        navbarScroll
-                    >
-                        <Nav.Link href="#action1">Home</Nav.Link>
-                        <Nav.Link href="#action2">Link</Nav.Link>
+                        navbarScroll>
+                        <NavLink className="nav-link" to="/">Home </NavLink>
+                        <NavLink className="nav-link" to="/cart-list">Cart List </NavLink>
+                        <NavLink className="nav-link" to="/login">Login </NavLink>
+
+
 
                     </Nav>
+                    {
+                        ValidationHelper.isLogin()?(
+                            <Button className="btn btn-danger">Logout</Button>
 
-                    <Button className="btn btn-danger">Login</Button>
+                        ):(
+                            <Button className="btn btn-danger">Login</Button>
+                        )
+                    }
+
+
 
                 </Navbar.Collapse>
             </Container>
