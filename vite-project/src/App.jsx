@@ -14,7 +14,6 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<ProductListPage/>} />
 
-                    <Route path="/verify" element={<VerifyPage/>}/>
                     <Route path="/cart-list" element={<CartListPage/>}/>
 
 
@@ -23,7 +22,17 @@ const App = () => {
         );
 
     }else {
+        return (
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<ProductListPage/>} />
+                    <Route path="/login" element={<LoginPage/>} />
+                    <Route path="/verify" element={<VerifyPage/>}/>
 
+
+                </Routes>
+            </BrowserRouter>
+        );
     }
 
 };
