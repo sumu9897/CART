@@ -4,9 +4,7 @@ class Helper {
         return false
     }
 
-    static API_BASE(){
-
-    }
+    static API_BASE= "https://cart-api.teamrabbil.com/api"
 
 }
 export default Helper
