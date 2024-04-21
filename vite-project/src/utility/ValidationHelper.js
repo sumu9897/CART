@@ -1,7 +1,7 @@
 class ValidationHelper {
 
     static isLogin(){
-        return true
+        return false
     }
 }
 export default ValidationHelper

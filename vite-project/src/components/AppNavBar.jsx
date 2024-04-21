@@ -20,16 +20,17 @@ const AppNavBar = () => {
                             navbarScroll
                         >
                             <NavLink className="nav-link" to="/">Home</NavLink>
-                            <NavLink className="nav-link" to="/cart-list">Cart List</NavLink>
-                            <NavLink className="nav-link" to="/login">Login</NavLink>
 
-
-
+                            {
+                                ValidationHelper.isLogin() &&
+                                <NavLink className="nav-link" to="/cart-list">Cart List</NavLink>
+                            }
 
                         </Nav>
                         {
                             ValidationHelper.isLogin()?(
                                 <button className="btn btn-primary">Logout</button>
+
 
 
                             ): (<button className="btn btn-primary">Login</button>)
