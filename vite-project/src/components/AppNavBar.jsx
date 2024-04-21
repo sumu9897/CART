@@ -2,13 +2,16 @@ import React from 'react';
 import {Container, Form, Nav, Navbar} from "react-bootstrap";
 import ValidationHelper from "../utility/ValidationHelper.js";
 import {NavLink} from "react-router-dom";
+import logo from "../assets/image/logo.png";
 
 const AppNavBar = () => {
     return (
         <div>
             <Navbar expand="lg" className="bg-body-tertiary">
                 <Container fluid>
-                    <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+                    <Navbar.Brand href="#">
+                        <img className="" src={logo} alt="logo" />
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
