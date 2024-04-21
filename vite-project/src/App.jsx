@@ -4,11 +4,11 @@ import ProductListPage from "./pages/ProductListPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import VerifyPage from "./pages/VerifyPage.jsx";
 import CartListPage from "./pages/CartListPage.jsx";
-import ValidationHelper from "./utility/ValidationHelper.js";
+import Helper from "./utility/Helper.js";
 import PageNotFound from "./pages/PageNotFound.jsx";
 
 const App = () => {
-    if(ValidationHelper.isLogin()){
+    if(Helper.isLogin()){
         return (
             <div>
                 <BrowserRouter>

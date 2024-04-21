@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container, Form, Nav, Navbar} from "react-bootstrap";
-import ValidationHelper from "../utility/ValidationHelper.js";
+import Helper from "../utility/Helper.js";
 import {NavLink} from "react-router-dom";
 import logo from "../assets/image/logo.png";
 
@@ -22,13 +22,13 @@ const AppNavBar = () => {
                             <NavLink className="nav-link" to="/">Home</NavLink>
 
                             {
-                                ValidationHelper.isLogin() &&
+                                Helper.isLogin() &&
                                 <NavLink className="nav-link" to="/cart-list">Cart List</NavLink>
                             }
 
                         </Nav>
                         {
-                            ValidationHelper.isLogin()?(
+                            Helper.isLogin()?(
                                 <button className="btn btn-primary">Logout</button>
 
 
