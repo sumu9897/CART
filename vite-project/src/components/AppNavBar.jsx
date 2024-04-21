@@ -1,43 +1,31 @@
 import React from 'react';
-import {Button, Container, Form, Nav, Navbar} from "react-bootstrap";
-import ValidationHelper from "../utility/ValidationHelper.js";
-import {NavLink} from "react-router-dom";
-import logo from "../assets/images/logo.png"
+import {Container, Form, Nav, Navbar} from "react-bootstrap";
 
 const AppNavBar = () => {
     return (
-        <Navbar expand="lg" className="bg-body-tertiary">
-            <Container fluid>
-                <Navbar.Brand href="#">
-                    <img alt="" className="" src={logo}/>
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls="navbarScroll" />
-                <Navbar.Collapse id="navbarScroll">
-                    <Nav
-                        className="me-auto my-2 my-lg-0"
-                        style={{ maxHeight: '100px' }}
-                        navbarScroll>
-                        <NavLink className="nav-link" to="/">Home </NavLink>
-                        <NavLink className="nav-link" to="/cart-list">Cart List </NavLink>
-                        <NavLink className="nav-link" to="/login">Login </NavLink>
+        <div>
+            <Navbar expand="lg" className="bg-body-tertiary">
+                <Container fluid>
+                    <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="navbarScroll" />
+                    <Navbar.Collapse id="navbarScroll">
+                        <Nav
+                            className="me-auto my-2 my-lg-0"
+                            style={{ maxHeight: '100px' }}
+                            navbarScroll
+                        >
+                            <Nav.Link href="#action1">Home</Nav.Link>
+                            <Nav.Link href="#action2">Link</Nav.Link>
 
 
+                        </Nav>
 
-                    </Nav>
-                    {
-                        ValidationHelper.isLogin()?(
-                            <Button className="btn btn-danger">Logout</Button>
+                        <button className="btn btn-primary">Login</button>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
 
-                        ):(
-                            <Button className="btn btn-danger">Login</Button>
-                        )
-                    }
-
-
-
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+        </div>
     );
 };
 

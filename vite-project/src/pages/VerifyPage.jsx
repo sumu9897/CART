@@ -4,7 +4,7 @@ import MasterLayout from "../components/MasterLayout.jsx";
 const VerifyPage = () => {
     return (
         <MasterLayout>
-            <h1>VerifyPage</h1>
+            <h1>Verify</h1>
         </MasterLayout>
     );
 };

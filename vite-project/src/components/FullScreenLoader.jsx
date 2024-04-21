@@ -3,7 +3,7 @@ import React from 'react';
 const FullScreenLoader = () => {
     return (
         <div>
-            
+
         </div>
     );
 };

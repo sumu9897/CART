@@ -1,25 +1,19 @@
 1. Collect Back End Documentation
-https://documenter.getpostman.com/view/9518923/2s946k6w8p
-
+ https://documenter.getpostman.com/view/9518923/2s946k6W8p
 2. Discover the back-end data flow
 
 3. Create New Stand Alon Front End Project
 
-4. Install Front-End Package
-     - Axios
-     - React Hot Toast
-     - Bootstrap
-     - React-Bootstrap
-     - Bootstrap-icons
-     - React Router DOM
-
+4. Install Front-end Package
+    - Axios(API Call from Backend to Frontend)
+    - React Hot Toast(Short Short Message Pop up when user get successfully message alert type message)
+    - Bootstrap/Tailwind (Design)
+    - React-Bootstrap
+    - Bootstrap-icons
+    - React Router DOM ( One Page to Another page goto easily)
+    -
 5. Project Structure
 
 6. Initial Route
 
-7. Master Layout
-
-8. 404 Set
-
-9. Conditional  Protected Route
-
+7. MasterLayout Design
