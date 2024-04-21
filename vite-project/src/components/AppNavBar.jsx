@@ -7,10 +7,10 @@ import logo from "../assets/image/logo.png";
 const AppNavBar = () => {
     return (
         <div>
-            <Navbar expand="lg" className="bg-body-tertiary">
+            <Navbar expand="lg" className="bg-body-tertiary bg-white shadow-sm">
                 <Container fluid>
                     <Navbar.Brand href="#">
-                        <img className="" src={logo} alt="logo" />
+                        <img className="nav-logo" src={logo} alt="logo" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
