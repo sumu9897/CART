@@ -10,6 +10,14 @@ class Helper {
         return value.length=== 0
     }
 
+    static tokenHeader(){
+        return {
+            headers:{
+                'token' : sessionStorage.getItem('token'),
+            }
+        }
+    }
+
     static API_BASE= "https://cart-api.teamrabbil.com/api"
 
 }

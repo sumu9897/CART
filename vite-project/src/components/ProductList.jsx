@@ -19,6 +19,14 @@ const ProductList = () => {
         setData(productList);
     }
 
+    const AddToCart=(id)=>{
+        alert(id)
+
+    }
+
+
+
+
     return (
         <div>
             {data == null ? (<FullScreenLoader/>) : (
@@ -43,7 +51,7 @@ const ProductList = () => {
 
 
                                             <p>{item['title']}</p>
-                                            <button onClick={()=>{AddToCart()}} className="btn btn-outline-secondary"> Add to Cart</button>
+                                            <button onClick={()=>{AddToCart(item['id'])}} className="btn btn-outline-secondary"> Add to Cart</button>
                                         </div>
                                     </div>
                                 )
