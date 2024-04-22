@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import axios from "axios";
 import Helper from "../utility/Helper.js";
 import FullScreenLoader from "./FullScreenLoader.jsx";
+import toast from "react-hot-toast";
 
 const ProductList = () => {
 
@@ -20,7 +21,22 @@ const ProductList = () => {
     }
 
     const AddToCart= async (id)=>{
-        let res= await
+        try{
+            let res= await axios.get(`${Helper.API_BASE}/create-cart/${id}`)
+            debugger;
+            if(res.data['msg']==="success"){
+                toast.success("Request Completed")
+
+            }else{
+                toast.error("Request Fail")
+
+            }
+        }catch (e){
+            debugger;
+            Helper.Unauthorized(e.response.status)
+
+        }
+
 
     }
 
@@ -51,7 +67,7 @@ const ProductList = () => {
 
 
                                             <p>{item['title']}</p>
-                                            <button onClick={()=>{AddToCart(item['id'])}} className="btn btn-outline-secondary"> Add to Cart</button>
+                                            <button onClick={async ()=>{ await AddToCart(item['id'])}} className="btn btn-outline-secondary"> Add to Cart</button>
                                         </div>
                                     </div>
                                 )

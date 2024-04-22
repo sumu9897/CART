@@ -18,6 +18,15 @@ class Helper {
         }
     }
 
+    static Unauthorized(code){
+
+        if(code === 401){
+            sessionStorage.clear();
+            window.location.href="/login"
+        }
+
+    }
+
     static API_BASE= "https://cart-api.teamrabbil.com/api"
 
 }
