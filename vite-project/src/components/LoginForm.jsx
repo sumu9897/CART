@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Helper from "../utility/Helper.js";
 import toast from "react-hot-toast";
 
 const LoginForm = () => {
+
+    let [submit,SetSubmit] = useState(false);
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -11,7 +13,10 @@ const LoginForm = () => {
         if (Helper.isEmpty(email)){
             toast.error("Email Required !")
         }else{
+
+            SetSubmit(true);
             // API Call
+            //SetSubmit(true);
         }
 
 
@@ -26,7 +31,7 @@ const LoginForm = () => {
                         <form onSubmit={onSubmit} className="p-4">
                             <label className="form-label"> Your Email Address</label>
                             <input name="email" type="email" className="form-control mt-2"/>
-                            <button className="btn btn-primary w-100" type="submit">Submit</button>
+                            <button disabled={submit} className="btn btn-primary w-100" type="submit">Submit</button>
                         </form>
                     </div>
 
