@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Helper from "../utility/Helper.js";
 import toast from "react-hot-toast";
+import ButtonSpinner from "./ButtonSpinner.jsx";
 
 const LoginForm = () => {
 
@@ -32,7 +33,7 @@ const LoginForm = () => {
                             <label className="form-label"> Your Email Address</label>
                             <input name="email" type="email" className="form-control mt-2"/>
                             <button disabled={submit} className="btn btn-primary w-100" type="submit">{
-                                submit?(""):("Submit")
+                                submit?(<ButtonSpinner/>):("Submit")
                             }
                             </button>
                         </form>
