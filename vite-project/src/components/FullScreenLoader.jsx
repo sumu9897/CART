@@ -6,7 +6,7 @@ const FullScreenLoader = () => {
             <div className="row justify-content-center">
                 <div className="col-md-2 loader">
                     <div className="spinner-border" role="status">
-                        <span className="visually-hidden">Loading...</span>
+                        <span className="visually-hidden"></span>
                     </div>
 
                 </div>
