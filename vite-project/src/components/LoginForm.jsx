@@ -31,7 +31,10 @@ const LoginForm = () => {
                         <form onSubmit={onSubmit} className="p-4">
                             <label className="form-label"> Your Email Address</label>
                             <input name="email" type="email" className="form-control mt-2"/>
-                            <button disabled={submit} className="btn btn-primary w-100" type="submit">Submit</button>
+                            <button disabled={submit} className="btn btn-primary w-100" type="submit">{
+                                submit?(""):("Submit")
+                            }
+                            </button>
                         </form>
                     </div>
 
