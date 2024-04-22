@@ -38,6 +38,7 @@ const AppNavBar = () => {
                             ): (<Link className="btn btn-primary" to="/login">Login</Link>)
                         }
 
+
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

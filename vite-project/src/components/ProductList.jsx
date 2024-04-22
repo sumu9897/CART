@@ -41,7 +41,9 @@ const ProductList = () => {
                                                 )}
                                             </h5>
 
+
                                             <p>{item['title']}</p>
+                                            <button onClick={()=>{AddToCart()}} className="btn btn-outline-secondary"> Add to Cart</button>
                                         </div>
                                     </div>
                                 )
