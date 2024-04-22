@@ -23,7 +23,7 @@ const ProductList = () => {
     const AddToCart= async (id)=>{
         try{
             let res= await axios.get(`${Helper.API_BASE}/create-cart/${id}`,Helper.tokenHeader())
-            debugger;
+            // debugger;
             if(res.data['msg']==="success"){
                 toast.success("Request Completed")
 
@@ -32,7 +32,7 @@ const ProductList = () => {
 
             }
         }catch (e){
-            debugger;
+            // debugger;
             Helper.Unauthorized(e.response.status)
 
         }
