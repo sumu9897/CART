@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container, Form, Nav, Navbar} from "react-bootstrap";
 import Helper from "../utility/Helper.js";
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import logo from "../assets/image/logo.png";
 
 const AppNavBar = () => {
@@ -30,10 +30,7 @@ const AppNavBar = () => {
                         {
                             Helper.isLogin()?(
                                 <button className="btn btn-primary">Logout</button>
-
-
-
-                            ): (<button className="btn btn-primary">Login</button>)
+                            ): (<Link className="btn btn-primary" to="/login">Login</Link>)
                         }
 
                     </Navbar.Collapse>
