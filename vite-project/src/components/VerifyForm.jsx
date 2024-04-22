@@ -24,6 +24,7 @@ const VerifyForm = () => {
             let res = await axios.post(`${Helper.API_BASE}/verify-login`, {UserEmail: email,OTP:otp})
             SetSubmit(false);
             if (res.data['msg'] === "success") {
+                sessionStorage.removeItem('email')
                 sessionStorage.setItem("token",res.data['data'])
                 window.location.href="/"
 
