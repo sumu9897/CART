@@ -13,8 +13,8 @@ const VerifyForm = () => {
     const onSubmit = async (e) => {
         e.preventDefault();
         let formData = new FormData(e.target);
-        let email = formData.get("otp");
-        if (Helper.isEmpty(email)) {
+        let otp = formData.get("otp");
+        if (Helper.isEmpty(otp)) {
             toast.error("Verification Code Required !")
         } else {
 
@@ -24,6 +24,8 @@ const VerifyForm = () => {
             let res = await axios.post(`${Helper.API_BASE}/verify-login`, {UserEmail: email,OTP:otp})
             SetSubmit(false);
             if (res.data['msg'] === "success") {
+                sessionStorage.setItem("token",res.data['data'])
+                window.location.href="/"
 
             } else {
                 toast.error("Register Error !")
