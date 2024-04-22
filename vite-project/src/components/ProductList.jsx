@@ -19,8 +19,8 @@ const ProductList = () => {
         setData(productList);
     }
 
-    const AddToCart=(id)=>{
-        alert(id)
+    const AddToCart= async (id)=>{
+        let res= await
 
     }
 
