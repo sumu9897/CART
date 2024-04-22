@@ -5,6 +5,11 @@ import {Link, NavLink} from "react-router-dom";
 import logo from "../assets/image/logo.png";
 
 const AppNavBar = () => {
+
+    const logout=()=>{
+        sessionStorage.clear();
+        window.location.href="/"
+    }
     return (
         <div>
             <Navbar expand="lg" className="bg-body-tertiary bg-white shadow">
@@ -29,7 +34,7 @@ const AppNavBar = () => {
                         </Nav>
                         {
                             Helper.isLogin()?(
-                                <button className="btn btn-primary">Logout</button>
+                                <button onClick={logout} className="btn btn-primary">Logout</button>
                             ): (<Link className="btn btn-primary" to="/login">Login</Link>)
                         }
 
