@@ -22,12 +22,21 @@ const ProductList = () => {
             {data===null?(<FullScreenLoader/>):(
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-3">
-                            <div className="card">
-                                <h1>Hello Class</h1>
-                            </div>
+                        {
+                            data.map((item,i)=>{
+                                return(
+                                    <div className="col-md-3 p-1">
 
-                        </div>
+                                        <div className="card p-3">
+                                            <img className="w-100" src={item['image']} alt=""/>
+                                            <h6>{item['title']}</h6>
+                                        </div>
+                                    </div>
+
+                                )
+
+                            })
+                        }
                     </div>
                 </div>
             )}
