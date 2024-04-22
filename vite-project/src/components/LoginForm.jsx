@@ -2,12 +2,15 @@ import React, {useState} from 'react';
 import Helper from "../utility/Helper.js";
 import toast from "react-hot-toast";
 import ButtonSpinner from "./ButtonSpinner.jsx";
+import axios from "axios";
+import {useNavigate, useNavigation} from "react-router-dom";
 
 const LoginForm = () => {
 
     let [submit,SetSubmit] = useState(false);
+    let navigate = useNavigate();
 
-    const onSubmit = (e) => {
+    const onSubmit = async (e) => {
         e.preventDefault();
         let formData= new FormData(e.target);
         let email = formData.get("email");
@@ -16,8 +19,22 @@ const LoginForm = () => {
         }else{
 
             SetSubmit(true);
-            // API Call
-            //SetSubmit(true);
+             // API Call
+            let res= await axios.post(`${Helper.API_BASE}/user-login`,{UserEmail:email})
+            SetSubmit(false);
+            if (res.data['msg']==="success"){
+                toast.success(res.data['data'])
+                sessionStorage.setItem('email',email);
+                navigate('/verify')
+            }else{
+                toast.error("Register Error !")
+
+                SetSubmit(true);
+            }
+
+
+
+
         }
 
 
